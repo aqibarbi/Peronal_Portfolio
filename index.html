@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Aqib Javed | Frontend &amp; WordPress Developer</title>
+  <meta name="description" content="Portfolio of Muhammad Aqib Javed, a frontend and WordPress developer in Bahawalpur, Pakistan building responsive websites with HTML, CSS and WordPress.">
+  <link rel="canonical" href="https://portfolio-muhammad-aqibjaved.netlify.app/">
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Muhammad Aqib Javed | Frontend &amp; WordPress Developer">
+  <meta property="og:description" content="Portfolio of Muhammad Aqib Javed. Responsive websites with HTML, CSS, JavaScript and WordPress.">
+  <meta property="og:image" content="https://portfolio-muhammad-aqibjaved.netlify.app/assets/img/og-image.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://portfolio-muhammad-aqibjaved.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Muhammad Aqib Javed | Frontend &amp; WordPress Developer">
+  <meta name="twitter:image" content="https://portfolio-muhammad-aqibjaved.netlify.app/assets/img/og-image.webp">
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/favicon-180.png">
+  <meta name="theme-color" content="#050914">
+
+  <!-- Fonts load early so text does not jump when they arrive -->
+  <link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/ibm-plex-sans-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/big-shoulders-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="assets/css/remixicon-subset.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Small script that adds the "js" class and starts Google Analytics -->
+  <script src="assets/js/head.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMZSLBRW2M"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Muhammad Aqib Javed",
+    "url": "https://portfolio-muhammad-aqibjaved.netlify.app/",
+    "image": "https://portfolio-muhammad-aqibjaved.netlify.app/assets/img/aqib.webp",
+    "jobTitle": "Frontend & WordPress Developer",
+    "description": "Freelance frontend and WordPress developer building responsive, custom websites with HTML, CSS, JavaScript and WordPress.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bahawalpur",
+      "addressCountry": "PK"
+    },
+    "knowsAbout": ["HTML", "CSS", "JavaScript", "WordPress", "Bootstrap", "Tailwind CSS", "Frontend Development", "Web Development"],
+    "sameAs": [
+      "https://linkedin.com/in/muhammad-aqibjaved-webdev",
+      "https://github.com/aqibarbi",
+      "https://api.whatsapp.com/send?phone=923056494101&text=Hello"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- Moving stars, drawn by stars.js -->
+  <canvas id="stars" aria-hidden="true"></canvas>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#home" class="logo" aria-label="Muhammad Aqib Javed, back to top">AJ</a>
+
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#delivered">Work</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-social">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          </button>
+          <a href="https://linkedin.com/in/muhammad-aqibjaved-webdev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ri-linkedin-box-line" aria-hidden="true"></i></a>
+          <a href="https://github.com/aqibarbi" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="ri-github-line" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu"><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="role-pill">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            Open to freelance &amp; remote work
+          </p>
+          <h1>Hello, I'm <span class="gradient">Muhammad Aqib Javed</span></h1>
+          <!-- Roles that slide in letter by letter (rotator in main.js). The sr-only line is what screen readers get. -->
+          <p class="rotator">
+            <span class="sr-only">Frontend Developer, WordPress Developer and Web Design Trainer</span>
+            <span class="rotator-text" id="rotator" aria-hidden="true" data-words="Frontend Developer|WordPress Developer|Web Design Trainer">Frontend Developer</span>
+          </p>
+          <p class="hero-lead">
+            I build fast, responsive websites and custom WordPress themes for small businesses. Based in Bahawalpur, Pakistan, and open to freelance and remote work.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Let's talk <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+            <a href="#delivered" class="btn">View my work <i class="ri-arrow-down-s-line" aria-hidden="true"></i></a>
+            <a href="https://cv-aqib-javed.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Resume <i class="ri-file-list-2-line" aria-hidden="true"></i></a>
+          </div>
+
+          <!-- Quick facts, all taken from the sections below -->
+          <ul class="hero-stats">
+            <li><strong>2+</strong><span>Years experience</span></li>
+            <li><strong>1</strong><span>Live client site</span></li>
+            <li><strong>2</strong><span>Certificates</span></li>
+          </ul>
+          <div class="hero-social">
+            <a href="https://linkedin.com/in/muhammad-aqibjaved-webdev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ri-linkedin-box-line" aria-hidden="true"></i></a>
+            <a href="https://github.com/aqibarbi" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="ri-github-line" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <!-- Black hole made with CSS only -->
+          <div class="blackhole" aria-hidden="true">
+            <div class="bh-glow"></div>
+            <div class="bh-ring"></div>
+            <div class="bh-core"></div>
+          </div>
+          <img class="hero-photo"
+               src="assets/img/aqib.webp"
+               srcset="assets/img/aqib-400.webp 400w, assets/img/aqib-640.webp 640w, assets/img/aqib.webp 800w"
+               sizes="(min-width: 1200px) 430px, (min-width: 992px) 400px, (min-width: 768px) 380px, 340px"
+               alt="Muhammad Aqib Javed"
+               width="800" height="937" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">About <span class="gradient">Me</span></h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-text card reveal" data-reveal="left">
+            <p>
+              I'm a <b>Frontend &amp; WordPress Developer</b> from Bahawalpur, Pakistan, with 2+ years of experience building clean, responsive websites for small businesses. I work with <b>HTML, CSS, Bootstrap, Tailwind CSS, JavaScript (ES6)</b> and <b>WordPress with Elementor</b>, and I currently teach web design and development at <b>Enablers Bahawalpur</b>. Open to freelance and remote projects.
+            </p>
+            <a href="#contact" class="btn">Get in touch</a>
+          </div>
+
+          <dl class="facts card reveal" data-reveal="right">
+            <div>
+              <dt>Location</dt>
+              <dd>Bahawalpur, Pakistan</dd>
+            </div>
+            <div>
+              <dt>Time zone</dt>
+              <dd>PKT (UTC+5)</dd>
+            </div>
+            <div>
+              <dt>Experience</dt>
+              <dd>2+ years</dd>
+            </div>
+            <div>
+              <dt>Right now</dt>
+              <dd>Trainer at Enablers Bahawalpur</dd>
+            </div>
+            <div>
+              <dt>Available for</dt>
+              <dd>Freelance and remote projects</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS ==================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">What I <span class="gradient">Offer</span></h2>
+          <p class="section-note">What you get, and what I build it with</p>
+        </div>
+
+        <div class="skills-grid" data-stagger>
+          <article class="card">
+            <h3>Frontend Development</h3>
+            <p>Fast, responsive websites that work from 320px phones to desktop.</p>
+            <ul class="case-points">
+              <li>Landing pages and business sites from a design or reference</li>
+              <li>Mobile-first layouts, clean HTML, CSS and JavaScript</li>
+              <li>Interactive parts: sliders, tabs, menus, forms</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>WordPress Development</h3>
+            <p>Custom WordPress sites built around how the business works.</p>
+            <ul class="case-points">
+              <li>Elementor Pro pages and custom-coded pages in a child theme on Hello Elementor</li>
+              <li>Product catalogs and filters with ACF and custom post types</li>
+              <li>Contact and quote forms with email notifications</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Speed &amp; Maintenance</h3>
+            <p>Faster, cleaner sites that stay that way.</p>
+            <ul class="case-points">
+              <li>PageSpeed and mobile fixes: caching, images, contrast, touch targets</li>
+              <li>Search Console setup: sitemap and indexing issues</li>
+              <li>Bug fixes and updates on existing sites</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Tech stack graphic: logos orbit the </> core, chips light up one by one.
+             The SVG is decorative (aria-hidden). The list below is the real text:
+             visible below 992px (on phones below 576px the graphic is hidden and only the list shows),
+             screen-reader only on desktop. -->
+        <div class="stack card reveal">
+          <div class="stack-art">
+<svg class="stack-svg" viewBox="0 0 1200 480" preserveAspectRatio="xMinYMid slice" aria-hidden="true" focusable="false">
+<defs>
+<pattern id="stk-dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#ffffff" fill-opacity=".05"/></pattern>
+<radialGradient id="stk-glow"><stop offset="0" stop-color="#f5a524" stop-opacity=".45"/><stop offset="1" stop-color="#f5a524" stop-opacity="0"/></radialGradient>
+<radialGradient id="stk-core"><stop offset="0" stop-color="#f5a524" stop-opacity=".55"/><stop offset="1" stop-color="#f5a524" stop-opacity="0"/></radialGradient>
+</defs>
+
+<rect x=".75" y=".75" width="1198.5" height="478.5" fill="url(#stk-dots)"/>
+<ellipse cx="330" cy="240" rx="330" ry="230" fill="url(#stk-glow)"/>
+<text x="48" y="58" class="mono" font-size="12" letter-spacing="2" fill="#9aa4b8">// THE STACK</text>
+<ellipse cx="330" cy="240" rx="120" ry="62" transform="rotate(-22 330 240)" fill="none" stroke="#f5a524" stroke-opacity=".5" stroke-dasharray="3 7"/><ellipse cx="330" cy="240" rx="185" ry="90" transform="rotate(24 330 240)" fill="none" stroke="#f5a524" stroke-opacity=".5" stroke-dasharray="3 7"/><ellipse cx="330" cy="240" rx="260" ry="130" transform="rotate(-10 330 240)" fill="none" stroke="#f5a524" stroke-opacity=".5" stroke-dasharray="3 7"/>
+<circle cx="330" cy="240" r="58" fill="url(#stk-core)"><animate attributeName="r" values="52;66;52" dur="3.5s" repeatCount="indefinite"/></circle>
+<circle cx="330" cy="240" r="26" fill="#0d1426" stroke="#f5a524" stroke-width="1.5"/>
+<text x="330" y="245" class="mono" font-size="15" font-weight="700" fill="#ffd07a" text-anchor="middle">&lt;/&gt;</text>
+<g transform="translate(441.26 195.05)"><animateMotion dur="16s" repeatCount="indefinite" path="M0,0 a120,62 -22 0 1 -222.52,89.91 a120,62 -22 0 1 222.52,-89.91"/><circle r="17" fill="#0d1426" stroke="#F7DF1E" stroke-opacity=".55"/><g transform="translate(-9 -9) scale(.75)"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z" fill="#F7DF1E"/></g></g>
+<g transform="translate(294.48 312.26)"><animateMotion dur="16s" repeatCount="indefinite" path="M0,0 a120,62 -22 0 1 71.03,-144.52 a120,62 -22 0 1 -71.03,144.52"/><circle r="17" fill="#0d1426" stroke="#E34F26" stroke-opacity=".55"/><g transform="translate(-9 -9) scale(.75)"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z" fill="#E34F26"/></g></g>
+<g transform="translate(254.26 212.69)"><animateMotion dur="16s" repeatCount="indefinite" path="M0,0 a120,62 -22 0 1 151.49,54.61 a120,62 -22 0 1 -151.49,-54.61"/><circle r="17" fill="#0d1426" stroke="#33a9dc" stroke-opacity=".55"/><g transform="translate(-9 -9) scale(.75)"><path d="M0 0v20.16A3.84 3.84 0 0 0 3.84 24h16.32A3.84 3.84 0 0 0 24 20.16V3.84A3.84 3.84 0 0 0 20.16 0Zm14.256 13.08c1.56 0 2.28 1.08 2.304 2.64h-1.608c.024-.288-.048-.6-.144-.84-.096-.192-.288-.264-.552-.264-.456 0-.696.264-.696.84-.024.576.288.888.768 1.08.72.288 1.608.744 1.92 1.296q.432.648.432 1.656c0 1.608-.912 2.592-2.496 2.592-1.656 0-2.4-1.032-2.424-2.688h1.68c0 .792.264 1.176.792 1.176.264 0 .456-.072.552-.24.192-.312.24-1.176-.048-1.512-.312-.408-.912-.6-1.32-.816q-.828-.396-1.224-.936c-.24-.36-.36-.888-.36-1.536 0-1.44.936-2.472 2.424-2.448m5.4 0c1.584 0 2.304 1.08 2.328 2.64h-1.608c0-.288-.048-.6-.168-.84-.096-.192-.264-.264-.528-.264-.48 0-.72.264-.72.84s.288.888.792 1.08c.696.288 1.608.744 1.92 1.296.264.432.408.984.408 1.656.024 1.608-.888 2.592-2.472 2.592-1.68 0-2.424-1.056-2.448-2.688h1.68c0 .744.264 1.176.792 1.176.264 0 .456-.072.552-.24.216-.312.264-1.176-.048-1.512-.288-.408-.888-.6-1.32-.816-.552-.264-.96-.576-1.2-.936s-.36-.888-.36-1.536c-.024-1.44.912-2.472 2.4-2.448m-11.031.018c.711-.006 1.419.198 1.839.63.432.432.672 1.128.648 1.992H9.336c.024-.456-.096-.792-.432-.96-.312-.144-.768-.048-.888.24-.12.264-.192.576-.168.864v3.504c0 .744.264 1.128.768 1.128a.65.65 0 0 0 .552-.264c.168-.24.192-.552.168-.84h1.776c.096 1.632-.984 2.712-2.568 2.688-1.536 0-2.496-.864-2.472-2.472v-4.032c0-.816.24-1.44.696-1.848.432-.408 1.146-.624 1.857-.63" fill="#33a9dc"/></g></g>
+<g transform="translate(458.06 346.27)"><animateMotion dur="26s" repeatCount="indefinite" path="M0,0 a185,90 24 0 1 -256.12,-212.55 a185,90 24 0 1 256.12,212.55"/><circle r="17" fill="#0d1426" stroke="#4fb3e0" stroke-opacity=".55"/><g transform="translate(-9 -9) scale(.75)"><path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0" fill="#4fb3e0"/></g><circle r="30" fill="none" stroke="#f5a524" stroke-opacity=".3" stroke-dasharray="2 5"/><g transform="translate(30 0)"><animateMotion dur="4.5s" repeatCount="indefinite" path="M0,0 a30 30 0 0 1 -60 0 a30 30 0 0 1 60 0"/><circle r="10" fill="#0d1426" stroke="#e0457b" stroke-opacity=".6"/><g transform="translate(-6 -6) scale(.5)"><path d="M12 0C5.372 0 0 5.372 0 12c0 6.626 5.372 12 12 12s12-5.372 12-12c0-6.626-5.372-12-12-12ZM9 17H7V7H9Zm8 0H11V15h6Zm0-4H11V11h6Zm0-4H11V7h6Z" fill="#e0457b"/></g></g></g>
+<g transform="translate(165.33 215.94)"><animateMotion dur="26s" repeatCount="indefinite" path="M0,0 a185,90 24 0 1 329.33,48.11 a185,90 24 0 1 -329.33,-48.11"/><circle r="17" fill="#0d1426" stroke="#9b7bd8" stroke-opacity=".55"/><g transform="translate(-9 -9) scale(.75)"><path d="M11.77 11.24H9.956V8.202h2.152c1.17 0 1.834.522 1.834 1.466 0 1.008-.773 1.572-2.174 1.572zm.324 1.206H9.957v3.348h2.231c1.459 0 2.232-.585 2.232-1.685s-.795-1.663-2.326-1.663zM24 11.39v1.218c-1.128.108-1.817.944-2.226 2.268-.407 1.319-.463 2.937-.42 4.186.045 1.3-.968 2.5-2.337 2.5H4.985c-1.37 0-2.383-1.2-2.337-2.5.043-1.249-.013-2.867-.42-4.186-.41-1.324-1.1-2.16-2.228-2.268V11.39c1.128-.108 1.819-.944 2.227-2.268.408-1.319.464-2.937.42-4.186-.045-1.3.968-2.5 2.338-2.5h14.032c1.37 0 2.382 1.2 2.337 2.5-.043 1.249.013 2.867.42 4.186.409 1.324 1.098 2.16 2.226 2.268zm-7.927 2.817c0-1.354-.953-2.333-2.368-2.488v-.057c1.04-.169 1.856-1.135 1.856-2.213 0-1.537-1.213-2.538-3.062-2.538h-4.16v10.172h4.181c2.218 0 3.553-1.086 3.553-2.876z" fill="#9b7bd8"/></g></g>
+<g transform="translate(366.61 157.78)"><animateMotion dur="26s" repeatCount="indefinite" path="M0,0 a185,90 24 0 1 -73.21,164.44 a185,90 24 0 1 73.21,-164.44"/><circle r="17" fill="#0d1426" stroke="#06B6D4" stroke-opacity=".55"/><g transform="translate(-9 -9) scale(.75)"><path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z" fill="#06B6D4"/></g></g>
+<g transform="translate(201.63 370.77)"><animateMotion dur="38s" repeatCount="indefinite" path="M0,0 a260,130 -10 0 1 256.75,-261.54 a260,130 -10 0 1 -256.75,261.54"/><circle r="17" fill="#0d1426" stroke="#F05032" stroke-opacity=".55"/><g transform="translate(-9 -9) scale(.75)"><path d="M13.09 23.549a1.54 1.54 0 0 1-2.18 0L.451 13.089a1.54 1.54 0 0 1 0-2.179l7.191-7.19 2.733 2.733a1.85 1.85 0 0 0 .964 2.326v6.66a1.849 1.849 0 1 0 1.54 0V8.957l2.508 2.508a1.85 1.85 0 1 0 1.09-1.09l-2.634-2.634a1.85 1.85 0 0 0-2.378-2.377L8.73 2.63 10.91.451a1.54 1.54 0 0 1 2.179 0l10.459 10.46a1.54 1.54 0 0 1 0 2.179z" fill="#F05032"/></g></g>
+<g transform="translate(76.83 250.47)"><animateMotion dur="38s" repeatCount="indefinite" path="M0,0 a260,130 -10 0 1 506.34,-20.95 a260,130 -10 0 1 -506.34,20.95"/><circle r="17" fill="#0d1426" stroke="#e6edf3" stroke-opacity=".55"/><g transform="translate(-9 -9) scale(.75)"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="#e6edf3"/></g></g>
+<g transform="translate(458.37 109.23)"><animateMotion dur="38s" repeatCount="indefinite" path="M0,0 a260,130 -10 0 1 -256.75,261.54 a260,130 -10 0 1 256.75,-261.54"/><circle r="17" fill="#0d1426" stroke="#00C7B7" stroke-opacity=".55"/><g transform="translate(-9 -9) scale(.75)"><path d="M6.49 19.04h-.23L5.13 17.9v-.23l1.73-1.71h1.2l.15.15v1.2L6.5 19.04ZM5.13 6.31V6.1l1.13-1.13h.23L8.2 6.68v1.2l-.15.15h-1.2L5.13 6.31Zm9.96 9.09h-1.65l-.14-.13v-3.83c0-.68-.27-1.2-1.1-1.23-.42 0-.9 0-1.43.02l-.07.08v4.96l-.14.14H8.9l-.13-.14V8.73l.13-.14h3.7a2.6 2.6 0 0 1 2.61 2.6v4.08l-.13.14Zm-8.37-2.44H.14L0 12.82v-1.64l.14-.14h6.58l.14.14v1.64l-.14.14Zm17.14 0h-6.58l-.14-.14v-1.64l.14-.14h6.58l.14.14v1.64l-.14.14ZM11.05 6.55V1.64l.14-.14h1.65l.14.14v4.9l-.14.14h-1.65l-.14-.13Zm0 15.81v-4.9l.14-.14h1.65l.14.13v4.91l-.14.14h-1.65l-.14-.14Z" fill="#00C7B7"/></g></g>
+
+<path d="M610 70v340" stroke="#1c2a4a" stroke-dasharray="2 6"/>
+<text x="650" y="79" class="mono" font-size="11.5" letter-spacing="2" fill="#9aa4b8">FRONTEND</text>
+<g><rect x="650" y="89" width="61" height="32" rx="16" fill="#f5a524" fill-opacity=".14" stroke="#f5a524" stroke-opacity=".5"><animate attributeName="stroke-opacity" values=".35;.35;1;.35;.35" keyTimes="0;0;0.03;0.05;1" dur="11.1s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".1;.1;.4;.1;.1" keyTimes="0;0;0.03;0.05;1" dur="11.1s" repeatCount="indefinite"/></rect><text x="680.5" y="110" class="sans" font-size="13.5" font-weight="500" fill="#ffe7b8" text-anchor="middle">HTML</text></g>
+<g><rect x="721" y="89" width="53" height="32" rx="16" fill="#f5a524" fill-opacity=".14" stroke="#f5a524" stroke-opacity=".5"><animate attributeName="stroke-opacity" values=".35;.35;1;.35;.35" keyTimes="0;0.05;0.08;0.11;1" dur="11.1s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".1;.1;.4;.1;.1" keyTimes="0;0.05;0.08;0.11;1" dur="11.1s" repeatCount="indefinite"/></rect><text x="747.5" y="110" class="sans" font-size="13.5" font-weight="500" fill="#ffe7b8" text-anchor="middle">CSS</text></g>
+<g><rect x="784" y="89" width="108" height="32" rx="16" fill="#f5a524" fill-opacity=".14" stroke="#f5a524" stroke-opacity=".5"><animate attributeName="stroke-opacity" values=".35;.35;1;.35;.35" keyTimes="0;0.11;0.14;0.16;1" dur="11.1s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".1;.1;.4;.1;.1" keyTimes="0;0.11;0.14;0.16;1" dur="11.1s" repeatCount="indefinite"/></rect><text x="838" y="110" class="sans" font-size="13.5" font-weight="500" fill="#ffe7b8" text-anchor="middle">JavaScript</text></g>
+<g><rect x="902" y="89" width="100" height="32" rx="16" fill="#f5a524" fill-opacity=".14" stroke="#f5a524" stroke-opacity=".5"><animate attributeName="stroke-opacity" values=".35;.35;1;.35;.35" keyTimes="0;0.16;0.19;0.22;1" dur="11.1s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".1;.1;.4;.1;.1" keyTimes="0;0.16;0.19;0.22;1" dur="11.1s" repeatCount="indefinite"/></rect><text x="952" y="110" class="sans" font-size="13.5" font-weight="500" fill="#ffe7b8" text-anchor="middle">Bootstrap</text></g>
+<g><rect x="1012" y="89" width="124" height="32" rx="16" fill="#f5a524" fill-opacity=".14" stroke="#f5a524" stroke-opacity=".5"><animate attributeName="stroke-opacity" values=".35;.35;1;.35;.35" keyTimes="0;0.22;0.24;0.27;1" dur="11.1s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".1;.1;.4;.1;.1" keyTimes="0;0.22;0.24;0.27;1" dur="11.1s" repeatCount="indefinite"/></rect><text x="1074" y="110" class="sans" font-size="13.5" font-weight="500" fill="#ffe7b8" text-anchor="middle">Tailwind CSS</text></g>
+<text x="650" y="161" class="mono" font-size="11.5" letter-spacing="2" fill="#9aa4b8">WORDPRESS</text>
+<g><rect x="650" y="171" width="100" height="32" rx="16" fill="#f5a524" fill-opacity=".14" stroke="#f5a524" stroke-opacity=".5"><animate attributeName="stroke-opacity" values=".35;.35;1;.35;.35" keyTimes="0;0.27;0.3;0.32;1" dur="11.1s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".1;.1;.4;.1;.1" keyTimes="0;0.27;0.3;0.32;1" dur="11.1s" repeatCount="indefinite"/></rect><text x="700" y="192" class="sans" font-size="13.5" font-weight="500" fill="#ffe7b8" text-anchor="middle">WordPress</text></g>
+<g><rect x="760" y="171" width="131" height="32" rx="16" fill="#f5a524" fill-opacity=".14" stroke="#f5a524" stroke-opacity=".5"><animate attributeName="stroke-opacity" values=".35;.35;1;.35;.35" keyTimes="0;0.32;0.35;0.38;1" dur="11.1s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".1;.1;.4;.1;.1" keyTimes="0;0.32;0.35;0.38;1" dur="11.1s" repeatCount="indefinite"/></rect><text x="825.5" y="192" class="sans" font-size="13.5" font-weight="500" fill="#ffe7b8" text-anchor="middle">Elementor Pro</text></g>
+<g><rect x="901" y="171" width="53" height="32" rx="16" fill="#f5a524" fill-opacity=".14" stroke="#f5a524" stroke-opacity=".5"><animate attributeName="stroke-opacity" values=".35;.35;1;.35;.35" keyTimes="0;0.38;0.41;0.43;1" dur="11.1s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".1;.1;.4;.1;.1" keyTimes="0;0.38;0.41;0.43;1" dur="11.1s" repeatCount="indefinite"/></rect><text x="927.5" y="192" class="sans" font-size="13.5" font-weight="500" fill="#ffe7b8" text-anchor="middle">ACF</text></g>
+<g><rect x="964" y="171" width="124" height="32" rx="16" fill="#f5a524" fill-opacity=".14" stroke="#f5a524" stroke-opacity=".5"><animate attributeName="stroke-opacity" values=".35;.35;1;.35;.35" keyTimes="0;0.43;0.46;0.49;1" dur="11.1s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".1;.1;.4;.1;.1" keyTimes="0;0.43;0.46;0.49;1" dur="11.1s" repeatCount="indefinite"/></rect><text x="1026" y="192" class="sans" font-size="13.5" font-weight="500" fill="#ffe7b8" text-anchor="middle">Fluent Forms</text></g>
+<g><rect x="650" y="213" width="131" height="32" rx="16" fill="#f5a524" fill-opacity=".14" stroke="#f5a524" stroke-opacity=".5"><animate attributeName="stroke-opacity" values=".35;.35;1;.35;.35" keyTimes="0;0.49;0.51;0.54;1" dur="11.1s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".1;.1;.4;.1;.1" keyTimes="0;0.49;0.51;0.54;1" dur="11.1s" repeatCount="indefinite"/></rect><text x="715.5" y="234" class="sans" font-size="13.5" font-weight="500" fill="#ffe7b8" text-anchor="middle">Theme Builder</text></g>
+<text x="650" y="285" class="mono" font-size="11.5" letter-spacing="2" fill="#9aa4b8">PERFORMANCE</text>
+<g><rect x="650" y="295" width="100" height="32" rx="16" fill="#f5a524" fill-opacity=".14" stroke="#f5a524" stroke-opacity=".5"><animate attributeName="stroke-opacity" values=".35;.35;1;.35;.35" keyTimes="0;0.54;0.57;0.59;1" dur="11.1s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".1;.1;.4;.1;.1" keyTimes="0;0.54;0.57;0.59;1" dur="11.1s" repeatCount="indefinite"/></rect><text x="700" y="316" class="sans" font-size="13.5" font-weight="500" fill="#ffe7b8" text-anchor="middle">WP Rocket</text></g>
+<g><rect x="760" y="295" width="100" height="32" rx="16" fill="#f5a524" fill-opacity=".14" stroke="#f5a524" stroke-opacity=".5"><animate attributeName="stroke-opacity" values=".35;.35;1;.35;.35" keyTimes="0;0.59;0.62;0.65;1" dur="11.1s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".1;.1;.4;.1;.1" keyTimes="0;0.59;0.62;0.65;1" dur="11.1s" repeatCount="indefinite"/></rect><text x="810" y="316" class="sans" font-size="13.5" font-weight="500" fill="#ffe7b8" text-anchor="middle">PageSpeed</text></g>
+<text x="650" y="367" class="mono" font-size="11.5" letter-spacing="2" fill="#9aa4b8">TOOLS</text>
+<g><rect x="650" y="377" width="53" height="32" rx="16" fill="#f5a524" fill-opacity=".14" stroke="#f5a524" stroke-opacity=".5"><animate attributeName="stroke-opacity" values=".35;.35;1;.35;.35" keyTimes="0;0.65;0.68;0.7;1" dur="11.1s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".1;.1;.4;.1;.1" keyTimes="0;0.65;0.68;0.7;1" dur="11.1s" repeatCount="indefinite"/></rect><text x="676.5" y="398" class="sans" font-size="13.5" font-weight="500" fill="#ffe7b8" text-anchor="middle">Git</text></g>
+<g><rect x="713" y="377" width="77" height="32" rx="16" fill="#f5a524" fill-opacity=".14" stroke="#f5a524" stroke-opacity=".5"><animate attributeName="stroke-opacity" values=".35;.35;1;.35;.35" keyTimes="0;0.7;0.73;0.76;1" dur="11.1s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".1;.1;.4;.1;.1" keyTimes="0;0.7;0.73;0.76;1" dur="11.1s" repeatCount="indefinite"/></rect><text x="751.5" y="398" class="sans" font-size="13.5" font-weight="500" fill="#ffe7b8" text-anchor="middle">GitHub</text></g>
+<g><rect x="800" y="377" width="85" height="32" rx="16" fill="#f5a524" fill-opacity=".14" stroke="#f5a524" stroke-opacity=".5"><animate attributeName="stroke-opacity" values=".35;.35;1;.35;.35" keyTimes="0;0.76;0.78;0.81;1" dur="11.1s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".1;.1;.4;.1;.1" keyTimes="0;0.76;0.78;0.81;1" dur="11.1s" repeatCount="indefinite"/></rect><text x="842.5" y="398" class="sans" font-size="13.5" font-weight="500" fill="#ffe7b8" text-anchor="middle">Netlify</text></g>
+<g><rect x="895" y="377" width="139" height="32" rx="16" fill="#f5a524" fill-opacity=".14" stroke="#f5a524" stroke-opacity=".5"><animate attributeName="stroke-opacity" values=".35;.35;1;.35;.35" keyTimes="0;0.81;0.84;0.86;1" dur="11.1s" repeatCount="indefinite"/><animate attributeName="fill-opacity" values=".1;.1;.4;.1;.1" keyTimes="0;0.81;0.84;0.86;1" dur="11.1s" repeatCount="indefinite"/></rect><text x="964.5" y="398" class="sans" font-size="13.5" font-weight="500" fill="#ffe7b8" text-anchor="middle">Search Console</text></g>
+
+</svg>
+          </div>
+          <div class="stack-list">
+            <h3 class="sr-only">Tech stack</h3>
+            <div>
+              <h4>Frontend</h4>
+              <ul class="chips">
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+                <li class="chip">JavaScript</li>
+                <li class="chip">Bootstrap</li>
+                <li class="chip">Tailwind CSS</li>
+              </ul>
+            </div>
+            <div>
+              <h4>WordPress</h4>
+              <ul class="chips">
+                <li class="chip">WordPress</li>
+                <li class="chip">Elementor Pro</li>
+                <li class="chip">ACF</li>
+                <li class="chip">Fluent Forms</li>
+                <li class="chip">Theme Builder</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Performance</h4>
+              <ul class="chips">
+                <li class="chip">WP Rocket</li>
+                <li class="chip">PageSpeed</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Tools</h4>
+              <ul class="chips">
+                <li class="chip">Git</li>
+                <li class="chip">GitHub</li>
+                <li class="chip">Netlify</li>
+                <li class="chip">Search Console</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== DELIVERED WORK ==================== -->
+    <section class="section" id="delivered">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Delivered <span class="gradient">Work</span></h2>
+          <p class="section-note">A live site for a real client</p>
+        </div>
+
+        <article class="delivered card reveal">
+          <div class="shot-col">
+            <div class="shot">
+              <img src="assets/img/perth.webp"
+                   srcset="assets/img/perth-400.webp 400w, assets/img/perth.webp 600w"
+                   sizes="(min-width: 900px) 460px, 90vw"
+                   alt="Perth Dynamic Solutions WordPress custom site homepage"
+                   width="600" height="389" loading="lazy">
+            </div>
+            <div class="shot-thumbs">
+              <a href="assets/img/pds-catalog.webp" class="thumb js-lightbox" aria-label="Enlarge: Class 1A catalog with category filter">
+                <img src="assets/img/pds-catalog-600.webp" alt="Class 1A catalog page with All, Expanders and Studio filter and six model cards" width="600" height="479" loading="lazy">
+                <span>Catalog + filters</span>
+              </a>
+              <a href="assets/img/pds-product.webp" class="thumb js-lightbox" aria-label="Enlarge: product detail page">
+                <img src="assets/img/pds-product-600.webp" alt="Meridian product detail page with price, bedrooms, bathroom and floor area" width="600" height="339" loading="lazy">
+                <span>Product page</span>
+              </a>
+              <a href="assets/img/pds-configurator.webp" class="thumb js-lightbox" aria-label="Enlarge: finish configurator">
+                <img src="assets/img/pds-configurator-600.webp" alt="Pick your finishes configurator with tabs for cladding, frame, flooring, benchtop, cabinetry and vanity, and colour swatches" width="600" height="379" loading="lazy">
+                <span>Finish configurator</span>
+              </a>
+            </div>
+            <blockquote class="quote">
+              "Professional, fast, efficient, value for money. Highly recommended. Extremely satisfied."
+              <cite>Hassan, Perth Dynamic Solutions</cite>
+            </blockquote>
+          </div>
+
+          <div class="delivered-body">
+            <h3>Perth Dynamic Solutions</h3>
+            <p class="role">Custom WordPress build</p>
+            <dl class="case-meta">
+              <div><dt>Client</dt><dd>Modular/prefab home company, Australia</dd></div>
+              <div><dt>Type</dt><dd>Live client site</dd></div>
+              <div><dt>Delivered</dt><dd>Remotely from Pakistan</dd></div>
+            </dl>
+            <h4 class="case-heading">What I built</h4>
+            <ul class="case-points">
+              <li>Every page custom-built</li>
+              <li>Custom child theme</li>
+              <li>ACF-powered product catalog with category filters</li>
+              <li>Finish-selection configurator per product: cladding, flooring, cabinetry</li>
+            </ul>
+            <p class="case-note">Referred by the owner of SkillWays.</p>
+            <ul class="chips">
+              <li class="chip">WordPress</li>
+              <li class="chip">Child theme</li>
+              <li class="chip">ACF</li>
+            </ul>
+            <div class="link-row">
+              <a href="assets/img/pds-review-proof.webp" class="text-link js-lightbox"><i class="ri-check-line" aria-hidden="true"></i> View original message</a>
+              <a href="https://perthdynamicsolutions.com.au" target="_blank" rel="noopener noreferrer" class="text-link">Visit site <i class="ri-arrow-right-up-long-line" aria-hidden="true"></i></a>
+              <a href="https://github.com/aqibarbi/Perth-Dynamics-Solutions" target="_blank" rel="noopener noreferrer" class="text-link">View code <i class="ri-github-line" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Practice That Turned Into <span class="gradient">Skill</span></h2>
+          <p class="section-note">Personal practice builds</p>
+        </div>
+
+        <div class="slider reveal" data-slider>
+          <div class="slider-track" tabindex="0" role="region" aria-label="Practice projects, scroll sideways">
+
+          <article class="card project slide">
+            <img src="assets/img/real-home.webp" srcset="assets/img/real-home-400.webp 400w, assets/img/real-home.webp 600w" sizes="(min-width: 980px) 340px, (min-width: 640px) 46vw, 85vw" alt="Real Home Ultra real estate website homepage" width="600" height="389" loading="lazy">
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-index">01</span>
+                <span class="badge">Practice build</span>
+              </div>
+              <h3>Real Home Ultra <span>Real estate website</span></h3>
+              <ul class="chips">
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+                <li class="chip">Bootstrap</li>
+                <li class="chip">Swiper.js</li>
+              </ul>
+              <p>A fully responsive real estate website built with HTML, CSS, Bootstrap and Swiper.js. Focused on clean property listings, smooth image sliders, and a layout that works on any screen size.</p>
+              <a href="https://real-home-ultra-bootstrap.netlify.app/" target="_blank" rel="noopener noreferrer" class="text-link" aria-label="Visit Real Home Ultra live site">Visit site <i class="ri-arrow-right-up-long-line" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="card project slide">
+            <img src="assets/img/cv-maker.webp" srcset="assets/img/cv-maker-400.webp 400w, assets/img/cv-maker.webp 600w" sizes="(min-width: 980px) 340px, (min-width: 640px) 46vw, 85vw" alt="CV Maker interactive resume builder tool" width="600" height="389" loading="lazy">
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-index">02</span>
+                <span class="badge">Practice build</span>
+              </div>
+              <h3>CV Maker <span>Interactive resume builder</span></h3>
+              <ul class="chips">
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+                <li class="chip">JavaScript</li>
+              </ul>
+              <p>A browser-based CV builder where users fill in their details and instantly get a formatted resume. Built with pure HTML, CSS and vanilla JavaScript, no frameworks and no libraries.</p>
+              <a href="https://cv-generator-js.netlify.app" target="_blank" rel="noopener noreferrer" class="text-link" aria-label="Visit CV Maker live site">Visit site <i class="ri-arrow-right-up-long-line" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="card project slide">
+            <img src="assets/img/metal-defence.webp" srcset="assets/img/metal-defence-400.webp 400w, assets/img/metal-defence.webp 600w" sizes="(min-width: 980px) 340px, (min-width: 640px) 46vw, 85vw" alt="Metal Defence corporate website UI" width="600" height="389" loading="lazy">
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-index">03</span>
+                <span class="badge">Practice build</span>
+              </div>
+              <h3>Metal Defence <span>Corporate website UI</span></h3>
+              <ul class="chips">
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+                <li class="chip">Flexbox</li>
+              </ul>
+              <p>A corporate-style website built with HTML and CSS, using Flexbox for layout. Emphasis on a strong visual structure and a responsive design that holds up on mobile.</p>
+              <a href="https://mental-defend-flex.netlify.app" target="_blank" rel="noopener noreferrer" class="text-link" aria-label="Visit Metal Defence live site">Visit site <i class="ri-arrow-right-up-long-line" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="card project slide">
+            <img src="assets/img/cayuga-lake.webp" srcset="assets/img/cayuga-lake-400.webp 400w, assets/img/cayuga-lake.webp 600w" sizes="(min-width: 980px) 340px, (min-width: 640px) 46vw, 85vw" alt="Cayuga Lake travel and hospitality website UI" width="600" height="389" loading="lazy">
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-index">04</span>
+                <span class="badge">Practice build</span>
+              </div>
+              <h3>Cayuga Lake <span>Travel &amp; hospitality UI</span></h3>
+              <ul class="chips">
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+              </ul>
+              <p>A scenic travel website UI built with HTML and CSS. Clean sections, a calm visual tone, and a layout designed to show destinations in an inviting way.</p>
+              <a href="https://cayuga-lake-flex.netlify.app" target="_blank" rel="noopener noreferrer" class="text-link" aria-label="Visit Cayuga Lake live site">Visit site <i class="ri-arrow-right-up-long-line" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="card project slide">
+            <img src="assets/img/anthony-medina.webp" srcset="assets/img/anthony-medina-400.webp 400w, assets/img/anthony-medina.webp 600w" sizes="(min-width: 980px) 340px, (min-width: 640px) 46vw, 85vw" alt="Anthony Medina personal portfolio website UI" width="600" height="389" loading="lazy">
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-index">05</span>
+                <span class="badge">Practice build</span>
+              </div>
+              <h3>Anthony Medina <span>Personal portfolio UI</span></h3>
+              <ul class="chips">
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+                <li class="chip">Flexbox</li>
+              </ul>
+              <p>A personal portfolio layout built with HTML and CSS using Flexbox. Simple, and focused on presenting work and skills clearly.</p>
+              <a href="https://flex-anthony-medina.netlify.app" target="_blank" rel="noopener noreferrer" class="text-link" aria-label="Visit Anthony Medina live site">Visit site <i class="ri-arrow-right-up-long-line" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="card project slide">
+            <img src="assets/img/houzez.webp" srcset="assets/img/houzez-400.webp 400w, assets/img/houzez.webp 600w" sizes="(min-width: 980px) 340px, (min-width: 640px) 46vw, 85vw" alt="Houzez real estate listings website UI" width="600" height="389" loading="lazy">
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-index">06</span>
+                <span class="badge">Practice build</span>
+              </div>
+              <h3>Houzez <span>Real estate listings UI</span></h3>
+              <ul class="chips">
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+                <li class="chip">Bootstrap</li>
+                <li class="chip">Swiper.js</li>
+              </ul>
+              <p>A property listings website built with HTML, CSS, Bootstrap and Swiper.js. It has smooth carousels, a grid-based listings layout, and full mobile responsiveness.</p>
+              <a href="https://houzez-bootstrap.netlify.app" target="_blank" rel="noopener noreferrer" class="text-link" aria-label="Visit Houzez live site">Visit site <i class="ri-arrow-right-up-long-line" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="card project slide">
+            <img src="assets/img/focal-point.webp" srcset="assets/img/focal-point-400.webp 400w, assets/img/focal-point.webp 600w" sizes="(min-width: 980px) 340px, (min-width: 640px) 46vw, 85vw" alt="Focal Point Homes real estate website UI" width="600" height="389" loading="lazy">
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-index">07</span>
+                <span class="badge">Practice build</span>
+              </div>
+              <h3>Focal Point Homes <span>Real estate website UI</span></h3>
+              <ul class="chips">
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+              </ul>
+              <p>A clean real estate website built with HTML and CSS. Focused on a minimal, easy-to-navigate layout that puts property listings front and center.</p>
+              <a href="https://focal-point-homes-flex.netlify.app" target="_blank" rel="noopener noreferrer" class="text-link" aria-label="Visit Focal Point Homes live site">Visit site <i class="ri-arrow-right-up-long-line" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          <article class="card project slide">
+            <img src="assets/img/mc-duffers.webp" srcset="assets/img/mc-duffers-400.webp 400w, assets/img/mc-duffers.webp 600w" sizes="(min-width: 980px) 340px, (min-width: 640px) 46vw, 85vw" alt="MC Duffers virtual golf landing page" width="600" height="389" loading="lazy">
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-index">08</span>
+                <span class="badge">Practice build</span>
+              </div>
+              <h3>MC Duffers <span>Virtual golf landing page</span></h3>
+              <ul class="chips">
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+                <li class="chip">Swiper.js</li>
+              </ul>
+              <p>A business landing page for a virtual golf simulator venue. It has features, gallery, testimonials and booking/contact sections, plus a responsive image slider.</p>
+              <a href="https://mcduffers-virtual-golf.netlify.app" target="_blank" rel="noopener noreferrer" class="text-link" aria-label="Visit MC Duffers live site">Visit site <i class="ri-arrow-right-up-long-line" aria-hidden="true"></i></a>
+            </div>
+          </article>
+
+          </div>
+
+          <div class="slider-bar">
+            <button class="slider-btn" type="button" data-dir="-1" aria-label="Previous projects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="slider-dots" role="group" aria-label="Project position"></div>
+            <button class="slider-btn" type="button" data-dir="1" aria-label="Next projects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE & EDUCATION ==================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">My Work <span class="gradient">Experience</span></h2>
+          <p class="section-note">Where I've worked and studied</p>
+        </div>
+
+        <div class="reveal">
+          <div class="tabs" role="tablist" aria-label="Experience or education">
+            <button class="tab" role="tab" id="tab-experience" aria-selected="true" aria-controls="panel-experience">
+              <i class="ri-briefcase-3-line" aria-hidden="true"></i> Experience
+            </button>
+            <button class="tab" role="tab" id="tab-education" aria-selected="false" aria-controls="panel-education">
+              <i class="ri-graduation-cap-line" aria-hidden="true"></i> Education
+            </button>
+          </div>
+
+          <!-- Experience -->
+          <div class="timeline" role="tabpanel" id="panel-experience" aria-labelledby="tab-experience">
+            <article class="step card">
+              <div class="step-head">
+                <div>
+                  <h3>Frontend Developer Intern</h3>
+                  <p class="step-sub">HTML, CSS, JavaScript &amp; WordPress</p>
+                  <p class="step-company">FINEWEBS Ltd.</p>
+                </div>
+                <p class="step-year">Aug 2024 – Apr 2026</p>
+              </div>
+              <p class="step-text">Started building responsive websites with HTML5, CSS3, Bootstrap and Tailwind CSS, then expanded into JavaScript (ES6) and WordPress, developing dynamic websites and custom themes with Elementor and Elementor Pro.</p>
+            </article>
+
+            <article class="step card">
+              <div class="step-head">
+                <div>
+                  <h3>Frontend Developer</h3>
+                  <p class="step-sub">Frontend &amp; WordPress</p>
+                  <p class="step-company">SkillWays, Bahawalpur</p>
+                </div>
+                <p class="step-year">Apr 2026 – Sep 2026</p>
+              </div>
+              <p class="step-text">Built custom WordPress pages, including every page of the Perth Dynamic Solutions site, and handled that client project. Worked with HTML5, CSS3, Bootstrap, Tailwind CSS, JavaScript (ES6) and WordPress.</p>
+              <blockquote class="quote">
+                "Aqib is a dedicated and technically capable professional with a strong understanding of web development and a great ability to turn requirements into practical, user-friendly solutions."
+                <cite><a href="https://linkedin.com/in/saqlain-riaz-hashmi" target="_blank" rel="noopener noreferrer">Saqlain Riaz</a>, Franchise Owner at Enablers (ex-SkillWays)</cite>
+              </blockquote>
+              <a href="assets/img/skillways-recommendation.webp" class="text-link js-lightbox"><i class="ri-check-line" aria-hidden="true"></i> View LinkedIn recommendation</a>
+            </article>
+
+            <article class="step card">
+              <div class="step-head">
+                <div>
+                  <h3>Web Design &amp; Development Trainer</h3>
+                  <p class="step-sub">HTML, CSS, WordPress</p>
+                  <p class="step-company">Enablers Bahawalpur (formerly SkillWays)</p>
+                </div>
+                <p class="step-year">Sep 2026 – Present</p>
+              </div>
+              <p class="step-text">Teaching Enablers' Web Design &amp; Development program: HTML, CSS (Flexbox, Grid, responsive design) and WordPress.</p>
+            </article>
+          </div>
+
+          <!-- Education -->
+          <div class="timeline" role="tabpanel" id="panel-education" aria-labelledby="tab-education" hidden>
+            <article class="step card">
+              <div class="step-head">
+                <div>
+                  <h3>Matric</h3>
+                  <p class="step-sub">Computer Science</p>
+                </div>
+                <p class="step-year">2018</p>
+              </div>
+              <p class="step-text">Completed Matriculation in Computer Science from Alpina School Bahawalpur.</p>
+            </article>
+
+            <article class="step card">
+              <div class="step-head">
+                <div>
+                  <h3>Intermediate</h3>
+                  <p class="step-sub">Intermediate in Commerce (I.Com)</p>
+                </div>
+                <p class="step-year">2019</p>
+              </div>
+              <p class="step-text">Completed Intermediate in Commerce (I.Com) from Punjab Group of Colleges, Bahawalpur.</p>
+            </article>
+
+            <article class="step card">
+              <div class="step-head">
+                <div>
+                  <h3>University</h3>
+                  <p class="step-sub">Bachelor's Degree in Commerce (4-year)</p>
+                </div>
+                <p class="step-year">Oct 2019 – Jun 2023</p>
+              </div>
+              <p class="step-text">Completed a 4-year Bachelor's degree in Commerce from the Islamia University of Bahawalpur. Alongside my studies, I developed a strong interest in web development and built practical skills through self-study.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CERTIFICATIONS ==================== -->
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title"><span class="gradient">Certifications</span></h2>
+        </div>
+
+        <div class="certs" data-stagger>
+          <article class="card">
+            <h3>Responsive Web Design</h3>
+            <p class="cert-info">freeCodeCamp, May 31, 2026, about 300 hours</p>
+            <a href="https://freecodecamp.org/certification/muhammad-aqibjaved-dev/responsive-web-design-v9" target="_blank" rel="noopener noreferrer" class="text-link">Verify certificate <i class="ri-arrow-right-up-long-line" aria-hidden="true"></i></a>
+          </article>
+
+          <article class="card">
+            <h3>JavaScript Developer</h3>
+            <p class="cert-info">freeCodeCamp, September 14, 2026, about 300 hours</p>
+            <a href="https://freecodecamp.org/certification/muhammad-aqibjaved-dev/javascript-v9" target="_blank" rel="noopener noreferrer" class="text-link">Verify certificate <i class="ri-arrow-right-up-long-line" aria-hidden="true"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2 class="section-title">Contact <span class="gradient">Me</span></h2>
+          <p class="section-note">Tell me about your next project.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal" data-reveal="left">
+            <div>
+              <h3>Available for</h3>
+              <address>WordPress sites, responsive frontend work, bug fixes and maintenance</address>
+            </div>
+            <div>
+              <h3>Email</h3>
+              <address><a class="contact-mail" href="mailto:maqibjaved.dev@gmail.com">maqibjaved.dev@gmail.com</a></address>
+              <div class="contact-actions">
+                <button class="btn btn-ghost" id="copy-email" type="button" data-email="maqibjaved.dev@gmail.com">Copy email <i class="ri-file-copy-line" aria-hidden="true"></i></button>
+                <a class="btn btn-ghost btn-wa" href="https://api.whatsapp.com/send?phone=923056494101&amp;text=Hi%20Aqib%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer">WhatsApp <i class="ri-arrow-right-up-long-line" aria-hidden="true"></i></a>
+              </div>
+            </div>
+            <div>
+              <h3>Location</h3>
+              <address>Bahawalpur, Pakistan (PKT, UTC+5)</address>
+            </div>
+            <div>
+              <h3>Find me on</h3>
+              <div class="link-row">
+                <a href="https://linkedin.com/in/muhammad-aqibjaved-webdev" target="_blank" rel="noopener noreferrer" class="text-link">LinkedIn <i class="ri-arrow-right-up-long-line" aria-hidden="true"></i></a>
+                <a href="https://github.com/aqibarbi" target="_blank" rel="noopener noreferrer" class="text-link">GitHub <i class="ri-arrow-right-up-long-line" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form card reveal" data-reveal="right" id="contact-form">
+            <input type="hidden" name="form-name" value="contact">
+            <input type="hidden" name="subject" id="form-subject" value="New portfolio message">
+            <!-- Honeypot field: real people never see it, bots fill it in -->
+            <p hidden>
+              <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            </p>
+
+            <div class="field">
+              <label for="form-name-input">Name</label>
+              <input type="text" id="form-name-input" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="form-email">Email</label>
+              <input type="email" id="form-email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="form-message">Message</label>
+              <textarea id="form-message" name="message" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn" id="form-submit">Send message <i class="ri-arrow-right-up-long-line" aria-hidden="true"></i></button>
+            <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="footer-year">2026</span> Muhammad Aqib Javed. All rights reserved.</p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="https://linkedin.com/in/muhammad-aqibjaved-webdev" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/aqibarbi" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ==================== BACK TO TOP (fills as you scroll, see main.js) ==================== -->
+  <button class="to-top" id="to-top" type="button" aria-label="Back to top">
+    <span class="to-top-inner"><i class="ri-arrow-down-s-line" aria-hidden="true"></i></span>
+  </button>
+
+  <!-- ==================== IMAGE POPUP ==================== -->
+  <dialog class="lightbox" id="lightbox" aria-label="Image preview">
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close image">&times;</button>
+    <img id="lightbox-image" src="" alt="Full size screenshot">
+  </dialog>
+
+  <script src="assets/js/stars.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "aac877d0a7c0498783d1edd43ce85c3e"}'></script>
+</body>
+</html>

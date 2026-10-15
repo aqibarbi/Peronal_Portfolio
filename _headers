@@ -1,0 +1,13 @@
+# CSP note: the first sha256 in script-src and "data:" in font-src exist only because
+# Netlify injects its own /scripts/hud script into this site (not part of this repo).
+# That script uses one inline script + a data-URI font, which the CSP blocked and
+# PageSpeed counted as console errors. If HUD is turned off in Netlify, delete both.
+# GTM/GA: googletagmanager.com in script-src and the Google hosts in img-src/connect-src
+# are for the gtag snippet. The gtag setup lives in assets/js/head.js (not inline),
+# so the old second sha256 for the inline gtag block is no longer needed.
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://www.googletagmanager.com 'sha256-mTJ4cJaTm2Gw95GeXEpZdvEEY9ybh6FZu1bwcNE7QlY='; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; connect-src 'self' https://cloudflareinsights.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com

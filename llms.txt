@@ -1,0 +1,20 @@
+# Muhammad Aqib Javed
+
+> Freelance Frontend & WordPress Developer based in Bahawalpur, Pakistan.
+
+Muhammad Aqib Javed is a frontend and WordPress developer with 2+ years of experience building responsive, custom websites for clients. He specializes in HTML, CSS, Bootstrap, Tailwind CSS, JavaScript (ES6), and WordPress (including CPT UI, ACF, Elementor, and WPForms).
+
+## Services
+- Custom frontend website development (HTML, CSS, JavaScript)
+- WordPress website development and customization
+- Responsive, mobile-friendly web design
+- Website bug fixes and maintenance
+
+## Links
+- [Portfolio](https://portfolio-muhammad-aqibjaved.netlify.app/)
+- [Resume](https://cv-aqib-javed.netlify.app/)
+- [LinkedIn](https://linkedin.com/in/muhammad-aqibjaved-webdev)
+- [GitHub](https://github.com/aqibarbi)
+
+## Contact
+Available for freelance web development projects. Reach out via LinkedIn or the contact form on the portfolio site.
