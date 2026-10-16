@@ -14,7 +14,9 @@
   const ctx = canvas.getContext('2d');
 
   // People can ask their system for less motion. Then we draw one still frame only.
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // (head.js adds the "always-animate" class to skip this check)
+  const alwaysAnimate = document.documentElement.classList.contains('always-animate');
+  const reduceMotion = !alwaysAnimate && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // Fewer stars on phones so older devices stay smooth
   const starCount = window.innerWidth < 768 ? 600 : 1666;
