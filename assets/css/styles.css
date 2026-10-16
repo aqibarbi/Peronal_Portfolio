@@ -1482,27 +1482,28 @@ button {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+/* :root:not(.always-animate) = these rules only apply when head.js has ALWAYS_ANIMATE = false */
 @media (prefers-reduced-motion: reduce) {
-  html {
+  :root:not(.always-animate) {
     scroll-behavior: auto;
   }
   /* scroll reveal: fade in only, no sliding (the opacity transition stays) */
-  .js .reveal {
+  :root:not(.always-animate).js .reveal {
     transform: none;
   }
   /* page-load entrance: same animation, but fade only instead of rising */
-  .hero-text > *,
-  .hero-visual,
-  .timeline:not([hidden]) {
+  :root:not(.always-animate) .hero-text > *,
+  :root:not(.always-animate) .hero-visual,
+  :root:not(.always-animate) .timeline:not([hidden]) {
     animation-name: fade-in;
   }
   /* spinning ring and endless loops stay off */
-  .bh-ring,
-  .pulse-dot::after,
-  .timeline > .step:last-child::before {
+  :root:not(.always-animate) .bh-ring,
+  :root:not(.always-animate) .pulse-dot::after,
+  :root:not(.always-animate) .timeline > .step:last-child::before {
     animation: none;
   }
-  .cursor {
+  :root:not(.always-animate) .cursor {
     display: none;
   }
 }
@@ -1632,7 +1633,7 @@ button {
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .thumb img { transition: none; }
+  :root:not(.always-animate) .thumb img { transition: none; }
 }
 
 /* Quote sits under the screenshots on desktop to balance the two columns.
@@ -1750,7 +1751,7 @@ button {
   transform: rotate(180deg);
 }
 @media (prefers-reduced-motion: reduce) {
-  .to-top { transition: none; }
+  :root:not(.always-animate) .to-top { transition: none; }
 }
 
 
@@ -1842,7 +1843,7 @@ button {
 
 /* No tilt for people who asked for less motion */
 @media (prefers-reduced-motion: reduce) {
-  .hero-photo { transform: none; }
+  :root:not(.always-animate) .hero-photo { transform: none; }
 }
 
 /* Light theme: warm amber disc instead of a dark one, so it sits well on the cream page */
