@@ -12,14 +12,14 @@ This is a responsive, single-page portfolio built with standard web technologies
 
 - Responsive layout with mobile navigation
 - Animated canvas star field and CSS-only black-hole hero visual
-- Tech stack graphic (inline SVG): logos orbit a core and tool chips light up in turn. It pauses off screen and with reduced motion, and is cropped to the orbit on small tablets and hidden on phones (the tech list shows instead)
+- Tech stack graphic (inline SVG): logos orbit a core and tool chips light up in turn. It pauses off screen, and is cropped to the orbit on small tablets and hidden on phones (the tech list shows instead)
 - Rotating role text and scroll-triggered section reveals
 - Project carousel with navigation dots, autoplay, mouse dragging, and touch scrolling
 - Experience and education tabs with keyboard navigation
 - Click-to-enlarge recommendation images
 - Contact form configured for Netlify Forms, with submission feedback
 - Copy-email button, active-section navigation, and custom pointer effects on supported devices
-- Reduced-motion support, keyboard focus styles, and a skip-to-content link
+- Reduced-motion switch (`ALWAYS_ANIMATE` in `assets/js/head.js`), keyboard focus styles, and a skip-to-content link
 - Search and social sharing metadata, structured data, sitemap, and custom 404 page
 - Self-hosted fonts and icons; no frontend framework, build step, or animation library
 
