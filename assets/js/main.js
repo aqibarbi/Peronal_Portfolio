@@ -366,6 +366,12 @@ const copyButton = document.getElementById('copy-email');
 const copyButtonText = copyButton.innerHTML;
 
 copyButton.addEventListener('click', function () {
+  // some in-app browsers have no clipboard API at all
+  if (!navigator.clipboard) {
+    copyButton.textContent = 'Could not copy, use the address above';
+    setTimeout(function () { copyButton.innerHTML = copyButtonText; }, 2000);
+    return;
+  }
   navigator.clipboard
     .writeText(copyButton.dataset.email)
     .then(function () {
@@ -532,7 +538,7 @@ form.addEventListener('submit', function (e) {
 
 // ---------- 12. Tech stack graphic: animation only while on screen ----------
 // The orbit and chip glow are SVG (SMIL) animations. CSS "reduced motion" rules do not
-// reach them, so they are paused here: always with reduced motion, otherwise while off screen.
+// reach them, so they are paused here: while off screen (and with reduced motion, unless head.js has ALWAYS_ANIMATE = true).
 (function () {
   const svg = document.querySelector('.stack-svg');
   if (!svg || typeof svg.pauseAnimations !== 'function') return;
@@ -549,7 +555,7 @@ form.addEventListener('submit', function (e) {
 })();
 
 
-// ---------- 9. Back to top button with a ring that fills as you scroll ----------
+// ---------- 13. Back to top button with a ring that fills as you scroll ----------
 (function () {
   const toTop = document.getElementById('to-top');
   if (!toTop) return;
@@ -579,17 +585,18 @@ form.addEventListener('submit', function (e) {
 })();
 
 
-// ---------- Dark / light theme toggle ----------
+// ---------- 14. Dark / light theme toggle ----------
 (function () {
   const root = document.documentElement;
   const button = document.getElementById('theme-toggle');
   const themeColorMeta = document.querySelector('meta[name="theme-color"]');
 
   // Update the attribute, the button label and the browser bar color
-  function setTheme(theme) {
+  function setTheme(theme, save) {
     root.setAttribute('data-theme', theme);
     button.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
     if (themeColorMeta) themeColorMeta.setAttribute('content', theme === 'light' ? '#faf7f2' : '#050914');
+    if (!save) return; // first call on page load only fixes the label, nothing to remember
     try {
       localStorage.setItem('theme', theme);
     } catch (error) {
@@ -598,9 +605,9 @@ form.addEventListener('submit', function (e) {
   }
 
   // Match the label to the theme head.js already set
-  setTheme(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+  setTheme(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark', false);
 
   button.addEventListener('click', function () {
-    setTheme(root.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
+    setTheme(root.getAttribute('data-theme') === 'light' ? 'dark' : 'light', true);
   });
 })();
