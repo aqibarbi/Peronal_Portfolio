@@ -289,7 +289,6 @@ button {
   display: flex;
   gap: 1.1rem;
   font-size: 1.5rem;
-  align-items: center;
 }
 .nav-social a {
   display: inline-flex;
@@ -1474,19 +1473,34 @@ button {
 /* =====================================================================
    REDUCED MOTION: no animation for people who turn it off in their system
    ===================================================================== */
+/* Before, this block used "* { animation: none !important; transition: none !important }".
+   That killed EVERY effect on phones that have "Remove animations" / Reduce Motion /
+   Battery saver turned on, so the site looked dead on mobile.
+   Now only the big movements are off (sliding, spinning, endless loops).
+   Soft fades stay, because a fade is not a motion trigger. */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-  }
+  /* scroll reveal: fade in only, no sliding (the opacity transition stays) */
   .js .reveal {
-    opacity: 1;
     transform: none;
+  }
+  /* page-load entrance: same animation, but fade only instead of rising */
+  .hero-text > *,
+  .hero-visual,
+  .timeline:not([hidden]) {
+    animation-name: fade-in;
+  }
+  /* spinning ring and endless loops stay off */
+  .bh-ring,
+  .pulse-dot::after,
+  .timeline > .step:last-child::before {
+    animation: none;
   }
   .cursor {
     display: none;
