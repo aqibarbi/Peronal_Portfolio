@@ -129,7 +129,13 @@
     animationId = 0;
   }
 
-  window.addEventListener('resize', resize);
+  // On phones the address bar hides and shows while scrolling. That changes the height a
+  // little and fires "resize". Redrawing the canvas each time made the stars flicker.
+  // So: skip it when the width is the same and the height changed by less than 200px.
+  window.addEventListener('resize', function () {
+    if (window.innerWidth === width && Math.abs(window.innerHeight - height) < 200) return;
+    resize();
+  });
   resize();
 
   // Nothing else to do for people who want less motion
