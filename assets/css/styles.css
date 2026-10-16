@@ -1693,11 +1693,6 @@ button {
 .footer-links a:focus-visible {
   color: var(--strong);
 }
-.footer-top i {
-  display: inline-block;
-  transform: rotate(180deg);
-  vertical-align: -0.1em;
-}
 
 /* =====================================================================
    BACK TO TOP (progress ring)
