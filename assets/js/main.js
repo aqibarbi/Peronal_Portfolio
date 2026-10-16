@@ -4,7 +4,9 @@
 // No libraries: the letter-by-letter roles use the Web Animations API,
 // the scroll effects use IntersectionObserver.
 
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+// "always-animate" class comes from head.js. If it is there, ignore the phone's reduced-motion setting.
+const alwaysAnimate = document.documentElement.classList.contains('always-animate');
+const prefersReducedMotion = !alwaysAnimate && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const hasMouse = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
 
@@ -266,9 +268,18 @@ sections.forEach(function (section) {
     sync();
   }, { threshold: 0.3 }).observe(root);
 
-  root.addEventListener('mouseenter', function () { hovering = true; sync(); });
-  root.addEventListener('mouseleave', function () { hovering = false; sync(); });
-  root.addEventListener('focusin', function () { hovering = true; sync(); });
+  // Only a real mouse pauses autoplay. A finger tap also fires mouseenter and focus,
+  // and nothing ever resets them, so autoplay stopped for good after the first tap on a phone.
+  root.addEventListener('pointerenter', function (e) {
+    if (e.pointerType === 'mouse') { hovering = true; sync(); }
+  });
+  root.addEventListener('pointerleave', function (e) {
+    if (e.pointerType === 'mouse') { hovering = false; sync(); }
+  });
+  // keyboard focus pauses it too, but a tap does not (a tap is not :focus-visible)
+  root.addEventListener('focusin', function (e) {
+    if (e.target.matches(':focus-visible')) { hovering = true; sync(); }
+  });
   root.addEventListener('focusout', function () { hovering = false; sync(); });
   document.addEventListener('visibilitychange', sync);
 
