@@ -950,49 +950,22 @@ button {
 }
 
 /* =====================================================================
-   S (sideways slider, scroll-snap)
+   PRACTICE PROJECTS
    main.js adds autoplay, mouse drag, arrows and dots on top of the native scroll.
    ===================================================================== */
-.slider {
-  position: relative;
-  min-width: 0;
-}
-
-.slider-track {
-  position: relative; /* slide.offsetLeft in main.js is measured from here */
-  display: flex;
+.practice-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.5rem;
-  /* room around the cards so their glow is not clipped by the scroll box */
-  padding: 0.75rem 0.25rem 1.75rem;
-  margin-inline: -0.25rem;
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
-  scroll-padding-inline: 0.25rem; /* same as the padding above, keeps the first card on the grid */
-  scrollbar-width: none;
-  cursor: grab;
 }
-.slider-track::-webkit-scrollbar {
-  display: none;
+.practice-grid [hidden], .practice-toggle[hidden] { display: none; }
+.practice-toggle { display: flex; margin: 2rem auto 0; }
+@media (min-width: 640px) {
+  .practice-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
-.slider-track.is-dragging {
-  cursor: grabbing;
-  scroll-snap-type: none;
-  user-select: none;
+@media (min-width: 980px) {
+  .practice-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
-
-.slide {
-  flex: 0 0 100%; /* phones: one full card, the next one stays out of view */
-  min-width: 0;
-  scroll-snap-align: start;
-}
-@media (min-width: 576px) {
-  .slide { flex-basis: calc((100% - 1.5rem) / 2); }
-}
-@media (min-width: 992px) {
-  .slide { flex-basis: calc((100% - 3rem) / 3); }
-}
-
 .project {
   position: relative;
   display: flex;
@@ -1008,6 +981,7 @@ button {
 }
 
 .project img {
+  height: auto;
   width: 100%;
   aspect-ratio: 600 / 389;
   object-fit: cover;
@@ -1093,65 +1067,6 @@ button {
 }
 .project-links .text-link + .text-link::after {
   content: none;
-}
-
-.slider-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 0.25rem;
-}
-.slider-btn {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  padding: 0;
-  border: 1px solid var(--line-bright);
-  border-radius: 50%;
-  background: rgba(245, 165, 36, 0.12);
-  color: var(--strong);
-  transition: all 0.3s var(--ease);
-}
-.slider-btn svg {
-  width: 20px;
-  height: 20px;
-}
-.slider-btn:hover {
-  background: rgba(245, 165, 36, 0.35);
-  border-color: var(--accent-soft);
-  box-shadow: 0 0 20px rgba(245, 165, 36, 0.45);
-}
-.slider-btn:active {
-  transform: scale(0.92);
-}
-
-.slider-dots {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-}
-.slider-dot {
-  position: relative;
-  width: 8px;
-  height: 8px;
-  padding: 0;
-  border: 0;
-  border-radius: 999px;
-  background: var(--accent-soft);
-  opacity: 0.3;
-  transition: all 0.4s var(--ease);
-}
-.slider-dot::after {
-  content: ""; /* bigger tap area */
-  position: absolute;
-  inset: -10px -4px;
-}
-.slider-dot.is-active {
-  width: 26px;
-  opacity: 1;
-  background: var(--gradient);
 }
 
 /* =====================================================================
@@ -1925,3 +1840,18 @@ button {
   .hero-lead { max-width: 36rem; }
   .hero-visual { width: min(100%, 430px); }
 }
+
+.delivered + .delivered { margin-top: 2rem; }
+.store-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: #faf4e8;
+  color: #293c32;
+  text-decoration: none;
+}
+.store-preview span {
+  padding-left: 1rem;
+  font: 600 clamp(1.2rem, 3vw, 2.4rem)/1.1 Georgia, serif;
+}
+.store-preview img { min-width: 0; object-fit: contain; }

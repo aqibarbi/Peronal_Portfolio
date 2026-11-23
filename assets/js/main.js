@@ -163,175 +163,21 @@ sections.forEach(function (section) {
 })();
 
 
-// ---------- 6. Projects slider: arrows, dots, autoplay, mouse drag ----------
-// The scrolling itself is native (CSS scroll-snap). Touch uses native swipe.
-(function () {
-  const root = document.querySelector('[data-slider]');
-  if (!root) return;
-
-  const track = root.querySelector('.slider-track');
-  const dotsEl = root.querySelector('.slider-dots');
-  const slides = Array.from(track.children);
-
-  let index = 0;       // which "page" is active
-  let pages = 1;       // how many positions the track can rest on
-  let timer = null;
-  let inView = false;
-  let hovering = false;
-  let frame = 0;
-
-  // mouse drag state
-  let pressed = false;
-  let dragging = false;
-  let moved = false;
-  let startX = 0;
-  let startLeft = 0;
-
-  // stop the browser's own ghost-drag of images and links
-  track.querySelectorAll('img, a').forEach(function (el) { el.draggable = false; });
-
-  const style = function () { return getComputedStyle(track); };
-  const gap = function () { return parseFloat(style().columnGap) || 0; };
-  const padLeft = function () { return parseFloat(style().paddingLeft) || 0; };
-  const slidePos = function (n) { return slides[n].offsetLeft - padLeft(); };
-
-  // how many cards fit at once (1 on phones, 2 on tablets, 3 on desktop)
-  function perView() {
-    const step = slides[0].offsetWidth + gap();
-    return Math.max(1, Math.round((track.clientWidth + gap()) / step));
-  }
-
-  const atEnd = function () {
-    return Math.ceil(track.scrollLeft + track.clientWidth) >= track.scrollWidth - 1;
-  };
-
-  /* ----- dots ----- */
-  function buildDots() {
-    pages = Math.max(1, slides.length - perView() + 1);
-    dotsEl.textContent = '';
-    for (let n = 0; n < pages; n++) {
-      const dot = document.createElement('button');
-      dot.type = 'button';
-      dot.className = 'slider-dot';
-      dot.setAttribute('aria-label', 'Go to position ' + (n + 1));
-      dot.addEventListener('click', goTo.bind(null, n));
-      dotsEl.append(dot);
-    }
-    setActive(Math.min(index, pages - 1));
-  }
-
-  function setActive(n) {
-    index = n;
-    Array.from(dotsEl.children).forEach(function (dot, i) {
-      dot.classList.toggle('is-active', i === n);
-    });
-  }
-
-  /* ----- moving ----- */
-  function goTo(n) {
-    const target = (n + pages) % pages;
-    track.scrollTo({
-      left: slidePos(target),
-      behavior: prefersReducedMotion ? 'auto' : 'smooth'
-    });
-  }
-  const next = function () { atEnd() ? goTo(0) : goTo(index + 1); };
-  const prev = function () { index === 0 ? goTo(pages - 1) : goTo(index - 1); };
-
-  root.querySelectorAll('.slider-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      btn.dataset.dir === '1' ? next() : prev();
-    });
+// Show six practice projects on first load. All remain available without JavaScript.
+const practiceToggle = document.querySelector('.practice-toggle');
+const extraProjects = Array.from(document.querySelectorAll('#practice-grid > article')).slice(6);
+if (practiceToggle && extraProjects.length) {
+  extraProjects.forEach(function (project) { project.hidden = true; });
+  practiceToggle.hidden = false;
+  practiceToggle.addEventListener('click', function () {
+    const expand = practiceToggle.getAttribute('aria-expanded') === 'false';
+    extraProjects.forEach(function (project) { project.hidden = !expand; });
+    practiceToggle.setAttribute('aria-expanded', String(expand));
+    practiceToggle.textContent = expand ? 'Show fewer projects' : 'Show more projects';
+    if (expand) extraProjects[0].querySelector('a').focus();
+    else practiceToggle.focus();
   });
-
-  // the active dot follows the scroll position (swipe, drag, autoplay, keyboard)
-  track.addEventListener('scroll', function () {
-    cancelAnimationFrame(frame);
-    frame = requestAnimationFrame(function () {
-      if (atEnd()) { setActive(pages - 1); return; }
-      const x = track.scrollLeft;
-      let best = 0;
-      for (let n = 1; n < pages; n++) {
-        if (Math.abs(slidePos(n) - x) < Math.abs(slidePos(best) - x)) best = n;
-      }
-      setActive(best);
-    });
-  }, { passive: true });
-
-  /* ----- autoplay: only while visible, and never under the mouse or focus ----- */
-  const stop = function () { clearInterval(timer); timer = null; };
-  const play = function () { if (!timer && !prefersReducedMotion) timer = setInterval(next, 4000); };
-  const sync = function () { (inView && !hovering && !document.hidden) ? play() : stop(); };
-
-  new IntersectionObserver(function (entries) {
-    inView = entries[0].isIntersecting;
-    sync();
-  }, { threshold: 0.3 }).observe(root);
-
-  // Only a real mouse pauses autoplay. A finger tap also fires mouseenter and focus,
-  // and nothing ever resets them, so autoplay stopped for good after the first tap on a phone.
-  root.addEventListener('pointerenter', function (e) {
-    if (e.pointerType === 'mouse') { hovering = true; sync(); }
-  });
-  root.addEventListener('pointerleave', function (e) {
-    if (e.pointerType === 'mouse') { hovering = false; sync(); }
-  });
-  // keyboard focus pauses it too, but a tap does not (a tap is not :focus-visible)
-  root.addEventListener('focusin', function (e) {
-    if (e.target.matches(':focus-visible')) { hovering = true; sync(); }
-  });
-  root.addEventListener('focusout', function () { hovering = false; sync(); });
-  document.addEventListener('visibilitychange', sync);
-
-  /* ----- mouse drag (touch swipe is native) ----- */
-  track.addEventListener('pointerdown', function (e) {
-    if (e.pointerType !== 'mouse' || e.button !== 0) return;
-    pressed = true;
-    moved = false;
-    startX = e.clientX;
-    startLeft = track.scrollLeft;
-  });
-
-  track.addEventListener('pointermove', function (e) {
-    if (!pressed) return;
-    const dx = e.clientX - startX;
-    if (!dragging && Math.abs(dx) > 5) {
-      dragging = true;
-      moved = true;
-      track.classList.add('is-dragging');
-      track.setPointerCapture(e.pointerId); // only after the threshold, so plain clicks still work
-    }
-    if (dragging) track.scrollLeft = startLeft - dx;
-  });
-
-  function endDrag() {
-    pressed = false;
-    if (!dragging) return;
-    dragging = false;
-    track.classList.remove('is-dragging'); // snapping comes back and settles on the nearest card
-  }
-  track.addEventListener('pointerup', endDrag);
-  track.addEventListener('pointercancel', endDrag);
-
-  // a drag must not count as a click on the card link
-  track.addEventListener('click', function (e) {
-    if (moved) {
-      e.preventDefault();
-      e.stopPropagation();
-      moved = false;
-    }
-  }, true);
-
-  // number of dots depends on the screen width
-  let resizeTimer = 0;
-  window.addEventListener('resize', function () {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(buildDots, 150);
-  });
-
-  buildDots();
-})();
-
+}
 
 // ---------- 7. Experience / Education tabs ----------
 const tabs = document.querySelectorAll('.tab');
@@ -501,7 +347,7 @@ form.addEventListener('submit', function (e) {
   });
 
   document.addEventListener('pointerover', function (e) {
-    const hit = e.target.closest && e.target.closest('a, button, input, textarea, [role="tab"], .slider-track');
+    const hit = e.target.closest && e.target.closest('a, button, input, textarea, [role="tab"]');
     ring.classList.toggle('hover', Boolean(hit));
   });
 
