@@ -1772,23 +1772,3 @@ button {
   .hero-lead { max-width: 36rem; }
   .hero-visual { width: min(100%, 430px); }
 }
-
-.delivered + .delivered { margin-top: 2rem; }
-.store-preview {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  background: #faf4e8;
-  color: #293c32;
-  text-decoration: none;
-}
-.store-preview span {
-  padding-left: 1rem;
-  font: 600 clamp(1.2rem, 3vw, 2.4rem)/1.1 Georgia, serif;
-}
-.store-preview img { min-width: 0; object-fit: contain; }
-
-.section-title, .delivered-body h3, .project-body h3 { font-family: var(--font-display); }
-.section-title .gradient { color: var(--strong); background: none; -webkit-text-fill-color: currentColor; }
-
-.hero-buttons .btn:not(.btn-primary) { background: transparent; border: 1px solid var(--muted); box-shadow: none; }
