@@ -11,7 +11,7 @@ document.documentElement.classList.add('js');
 // "reduced motion", and then every animation stayed off.
 // true  = play the animations anyway (CSS, main.js and stars.js all read this class)
 // false = follow the phone setting again
-const ALWAYS_ANIMATE = true;
+const ALWAYS_ANIMATE = false;
 if (ALWAYS_ANIMATE) document.documentElement.classList.add('always-animate');
 
 // Theme: use the saved choice, otherwise dark. Runs before paint so there is no flash.
